@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
-    private GameObject startPoint;
-    private GameObject Player;
+    public AudioClip loseSound; 
+    private AudioSource audioSource;
 
     void Start()
     {
-    Player = GameObject.FindGameObjectWithTag("Player");
-    startPoint = GameObject.FindGameObjectWithTag("startPoint");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -16,14 +15,15 @@ public class DeathScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-          if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (Player != null && startPoint != null)
-            {
-                Player.transform.position = startPoint.transform.position;
-            }
+            audioSource.PlayOneShot(loseSound);
+
+            GameObject startPoint = GameObject.FindGameObjectWithTag("startPoint");
+            other.transform.position = startPoint.transform.position;
+            
         }
     }
 }
