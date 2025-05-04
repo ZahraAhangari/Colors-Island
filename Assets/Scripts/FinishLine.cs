@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+
+    public string nextLevelName;
+
     void Start()
     {
         
@@ -13,11 +16,12 @@ public class FinishLine : MonoBehaviour
         
     }
 
-    private void onCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Level3");
+            SceneManager.LoadScene(nextLevelName);
+            Debug.Log("Loading is ok");
         }
     }
 }

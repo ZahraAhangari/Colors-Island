@@ -2078,6 +2078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 730352932}
+  - component: {fileID: 730352933}
   - component: {fileID: 730352931}
   - component: {fileID: 730352930}
   m_Layer: 0
@@ -2199,6 +2200,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &730352933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730352929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2139ced89d046984db0547cf76130d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: Level3
 --- !u!1 &745605756
 GameObject:
   m_ObjectHideFlags: 0
@@ -25739,7 +25753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ce3ed48defd3d45bdf807316af6b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: Player
 --- !u!1 &1190220256
 GameObject:
   m_ObjectHideFlags: 0
