@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TreeOpacityController : MonoBehaviour
+public class OpacityController : MonoBehaviour
 {
 
     private SpriteRenderer spriteRenderer;

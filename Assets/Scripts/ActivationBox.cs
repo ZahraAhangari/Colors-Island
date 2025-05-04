@@ -14,10 +14,10 @@ public class ActivationBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            TreeOpacityController[] trees = FindObjectsOfType<TreeOpacityController>();
-            foreach (TreeOpacityController tree in trees)
+            OpacityController[] itemsOpacity = FindObjectsOfType<OpacityController>();
+            foreach (OpacityController item in itemsOpacity)
             {
-                tree.SetOpaque();
+                item.SetOpaque();
             }
 
             audioSource.PlayOneShot(winSound);
